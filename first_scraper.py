@@ -1,6 +1,5 @@
 from requests_html import HTMLSession
 from bs4 import BeautifulSoup as bs
-import numpy as np
 import pandas as pd
 
 # url = 'https://uk.indeed.com/jobs?q=Graduate&start=00'
@@ -36,10 +35,10 @@ for a in pages:
             salary.append('N/A')
 
 data_dict = {
-    'job_titles':job_title,
-    'companies':companies,
-    'location':location,
-    'salary':salary
+    'Job_titles':job_title,
+    'Companies':companies,
+    'Location':location,
+    'Salary':salary
     }
 
 df = pd.DataFrame(data_dict)
